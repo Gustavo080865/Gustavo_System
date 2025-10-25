@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gustavo System - Soluciones Informáticas Completas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Gustavo System Logo"> <!-- Aquí iría el logo -->
+                <h1>Gustavo System</h1>
+            </div>
+            <nav>
+                <button class="hamburger" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#repuestos">Repuestos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Tu Aliado Tecnológico Integral</h2>
+                    <p>En Gustavo System, ofrecemos soluciones completas en comercialización, mantenimiento y repuestos para equipos de cómputo.</p>
+                    <a href="#servicios" class="btn btn-primary">Descubre nuestros servicios</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios" class="services">
+            <div class="container">
+                <h3>Nuestros Servicios</h3>
+                <div class="service-grid">
+                    <div class="service-item">
+                        <i class="icon-shop"></i> <!-- Icono de tienda/comercialización -->
+                        <h4>Comercialización</h4>
+                        <p>Venta de equipos nuevos y usados de las mejores marcas, adaptados a tus necesidades.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="icon-wrench"></i> <!-- Icono de llave inglesa/mantenimiento -->
+                        <h4>Mantenimiento</h4>
+                        <p>Soporte técnico preventivo y correctivo para garantizar el óptimo rendimiento de tus equipos.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="icon-parts"></i> <!-- Icono de engranaje/repuestos -->
+                        <h4>Repuestos</h4>
+                        <p>Amplio stock de componentes originales y alternativos para todas tus reparaciones.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="productos" class="products">
+            <div class="container">
+                <h3>Equipos Disponibles</h3>
+                <p class="section-description">Explora nuestra selección de laptops, desktops y periféricos.</p>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200?text=Laptop+Gamer" alt="Laptop Gamer">
+                        <h4>Laptop Gamer de Última Generación</h4>
+                        <p>Potencia y rendimiento para tus juegos y trabajo.</p>
+                        <a href="#" class="btn btn-secondary">Ver Detalles</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200?text=PC+Oficina" alt="PC Oficina">
+                        <h4>PC de Oficina Eficiente</h4>
+                        <p>Ideal para productividad diaria y tareas empresariales.</p>
+                        <a href="#" class="btn btn-secondary">Ver Detalles</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200?text=Monitor+4K" alt="Monitor 4K">
+                        <h4>Monitor 4K Profesional</h4>
+                        <p>Colores vibrantes y alta resolución para diseñadores y editores.</p>
+                        <a href="#" class="btn btn-secondary">Ver Detalles</a>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary products-link">Ver todo nuestro catálogo</a>
+            </div>
+        </section>
+
+        <section id="repuestos" class="parts-section">
+            <div class="container">
+                <h3>Repuestos y Componentes</h3>
+                <p class="section-description">Encuentra la pieza exacta que necesitas para tu equipo.</p>
+                <div class="parts-grid">
+                    <div class="part-item">
+                        <i class="icon-ram"></i> <!-- Icono de RAM -->
+                        <h4>Memorias RAM</h4>
+                        <p>Actualiza o reemplaza la memoria de tu equipo.</p>
+                    </div>
+                    <div class="part-item">
+                        <i class="icon-ssd"></i> <!-- Icono de SSD -->
+                        <h4>Discos SSD/HDD</h4>
+                        <p>Mejora la velocidad y capacidad de almacenamiento.</p>
+                    </div>
+                    <div class="part-item">
+                        <i class="icon-battery"></i> <!-- Icono de Batería -->
+                        <h4>Baterías para Laptops</h4>
+                        <p>Baterías de larga duración para diversas marcas.</p>
+                    </div>
+                    <div class="part-item">
+                        <i class="icon-keyboard"></i> <!-- Icono de Teclado -->
+                        <h4>Teclados y Pantallas</h4>
+                        <p>Repuestos para laptops y monitores.</p>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary parts-link">Consultar stock de repuestos</a>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact">
+            <div class="container">
+                <h3>Contáctanos</h3>
+                <p>¿Tienes alguna pregunta o necesitas un servicio? Estamos aquí para ayudarte.</p>
+                <form class="contact-form">
+                    <input type="text" placeholder="Tu Nombre" required>
+                    <input type="email" placeholder="Tu Correo Electrónico" required>
+                    <input type="text" placeholder="Asunto">
+                    <textarea placeholder="Tu Mensaje" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                </form>
+                <div class="contact-info">
+                    <p><i class="icon-phone"></i> +57 3XX XXX XXXX</p>
+                    <p><i class="icon-email"></i> info@gustavosystem.com</p>
+                    <p><i class="icon-location"></i> Dirección de tu local, Ciudad, País</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Gustavo System. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="icon-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="icon-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="icon-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
