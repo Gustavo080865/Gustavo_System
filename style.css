@@ -1,0 +1,538 @@
+/* Variables de Colores */
+:root {
+    --primary-color: #1a2a44; /* Azul Oscuro */
+    --secondary-color: #00bcd4; /* Cian */
+    --accent-color: #ff9800; /* Naranja */
+    --light-gray: #f5f5f5;
+    --white: #ffffff;
+    --text-color: #333;
+    --light-text: #555;
+}
+
+/* Base y Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--white);
+    overflow-x: hidden; /* Evita scroll horizontal */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--accent-color), 10%); /* Efecto hover más oscuro */
+    color: var(--white);
+}
+
+.btn-secondary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--white);
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px; /* Ajusta el tamaño de tu logo */
+    margin-right: 10px;
+}
+
+.logo h1 {
+    color: var(--white);
+    font-size: 1.8em;
+    margin: 0;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+nav .nav-links li {
+    margin-left: 30px;
+}
+
+nav .nav-links a {
+    color: var(--white);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+.hamburger {
+    display: none; /* Oculto por defecto en desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(26, 42, 68, 0.8), rgba(26, 42, 68, 0.8)), url('https://via.placeholder.com/1920x800?text=Fondo+Tecnologico') no-repeat center center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 100px 0;
+    height: 600px; /* Altura fija para el hero */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-size: 3.5em;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    color: var(--light-gray);
+}
+
+/* Sections General */
+section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+section:nth-child(even) {
+    background-color: var(--light-gray);
+}
+
+.section-description {
+    font-size: 1.1em;
+    color: var(--light-text);
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Services Section */
+.services .service-grid,
+.products .product-grid,
+.parts-section .parts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-item, .product-card, .part-item {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.service-item:hover, .product-card:hover, .part-item:hover {
+    transform: translateY(-10px);
+}
+
+.service-item i, .part-item i {
+    font-size: 3.5em;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    display: block; /* Asegura que el icono esté centrado */
+}
+
+.service-item h4, .product-card h4, .part-item h4 {
+    color: var(--primary-color);
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.service-item p, .part-item p {
+    color: var(--light-text);
+}
+
+/* Products Section */
+.product-card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.product-card .btn {
+    margin-top: 20px;
+}
+
+.products-link {
+    margin-top: 60px;
+}
+
+/* Parts Section (similar a services) */
+.parts-link {
+    margin-top: 60px;
+}
+
+/* Contact Section */
+.contact {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 80px 0;
+}
+
+.contact h3 {
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    color: var(--light-gray);
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--secondary-color);
+}
+
+.contact-form button {
+    align-self: flex-start; /* Alinea el botón a la izquierda */
+    margin-top: 10px;
+}
+
+.contact-info {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    color: var(--light-gray);
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: var(--secondary-color);
+    font-size: 1.3em;
+}
+
+/* Footer */
+footer {
+    background-color: #111b2b; /* Un poco más oscuro que el primario */
+    color: var(--light-gray);
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Para que se adapte en móviles */
+}
+
+footer p {
+    margin: 0;
+}
+
+.social-links a {
+    color: var(--light-gray);
+    font-size: 1.5em;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Iconos - NOTA: Necesitarás una librería de iconos como Font Awesome o crear los tuyos.
+   Para este ejemplo, solo estoy usando placeholders de clase.
+   Deberías incluir Font Awesome en tu <head>:
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+*/
+/* Ejemplo de cómo se verían los iconos con Font Awesome */
+.icon-shop::before { content: "\f291"; font-family: 'Font Awesome 5 Free'; font-weight: 900; } /* fa-shopping-cart */
+.icon-wrench::before { content: "\f0ad"; font-family: 'Font Awesome 5 Free'; font-weight: 900; } /* fa-wrench */
+.icon-parts::before { content: "\f085"; font-family: 'Font Awesome 5 Free'; font-weight: 900; } /* fa-cogs */
+.icon-ram::before { content: "\f538"; font-family: 'Font Awesome 5 Free'; font-weight: 900; } /* fa-memory */
+.icon-ssd::before { content: "\f0a0"; font-family: 'Font Awesome 5 Free'; font-weight: 900; } /* fa-hdd */
+.icon-battery::before { content: "\f240"; font-family: 'Font Awesome 5 Free'; font-weight: 900; } /* fa-battery-full */
+.icon-keyboard::before { content: "\f11c"; font-family: 'Font Awesome 5 Free'; font-weight: 900; } /* fa-keyboard */
+.icon-phone::before { content: "\f095"; font-family: 'Font Awesome 5 Free'; font-weight: 900; } /* fa-phone */
+.icon-email::before { content: "\f0e0"; font-family: 'Font Awesome 5 Free'; font-weight: 900; } /* fa-envelope */
+.icon-location::before { content: "\f3c5"; font-family: 'Font Awesome 5 Free'; font-weight: 900; } /* fa-map-marker-alt */
+.icon-facebook::before { content: "\f09a"; font-family: 'Font Awesome 5 Brands'; font-weight: 400; } /* fa-facebook-f */
+.icon-instagram::before { content: "\f16d"; font-family: 'Font Awesome 5 Brands'; font-weight: 400; } /* fa-instagram */
+.icon-twitter::before { content: "\f099"; font-family: 'Font Awesome 5 Brands'; font-weight: 400; } /* fa-twitter */
+
+
+/* Media Queries para Responsividad */
+@media (max-width: 992px) {
+    .hero h2 {
+        font-size: 2.8em;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.7em;
+    }
+
+    .service-grid, .product-grid, .parts-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logo {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav .nav-links {
+        display: none; /* Ocultar menú por defecto en móvil */
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 70px; /* Ajusta según la altura de tu header */
+        left: 0;
+        right: 0;
+        padding: 20px 0;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    nav .nav-links.active {
+        display: flex; /* Mostrar cuando el menú esté activo */
+    }
+
+    nav .nav-links li {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: block; /* Mostrar el botón de hamburguesa */
+        position: absolute;
+        right: 20px;
+        top: 25px;
+    }
+
+    .hero {
+        padding: 80px 0;
+        height: auto;
+    }
+
+    .hero h2 {
+        font-size: 2.2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .service-item, .product-card, .part-item {
+        padding: 25px;
+    }
+
+    .contact-form button {
+        align-self: stretch; /* Botón de contacto ocupa todo el ancho */
+    }
+
+    footer .container {
+        flex-direction: column;
+    }
+
+    footer p {
+        margin-bottom: 15px;
+    }
+
+    .social-links {
+        margin-top: 15px;
+    }
+    .social-links a {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.5em;
+    }
+
+    .hero h2 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .service-grid, .product-grid, .parts-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+    }
+
+    .product-card img {
+        height: 180px;
+    }
+}
